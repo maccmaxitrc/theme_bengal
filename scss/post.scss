@@ -1,0 +1,567 @@
+$body-font-stack: Roboto, sans-serif;
+$header-font-stack: Roboto Slab, serif;
+
+$growling-gray-light: #e6e7e8;
+$text-highlight-color: #e0e0e0;
+$dimmed-text-color: #6a737b;
+$course-index-text-color: #495057;
+$header-gray: #1d1c1d;
+$text-color: #1d2125;
+$roarange: #f47920;
+$link-color: #b82b00;
+$link-hover-color: #701a00;
+$button-color: #d4441c;
+$button-hover-color: #b53917;
+
+$border-radius: 4px;
+
+.navbar, #searchform-navbar {
+  background-image: url([[pix:theme|bengal-header]]);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 190%;
+}
+
+.navbar-nav {
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: $text-highlight-color;
+    color: black;
+  }
+  .nav-link,
+  .dropdown-toggle::after,
+  .usertext,
+  label {
+    color: white !important;
+  }
+  .login{
+    a{
+      color: white !important;
+      &:hover{
+        color: white !important;
+        text-decoration: none;
+      }
+      &:focus{
+        background-color: transparent;
+        box-shadow: 0 0 0 0.2rem $roarange;
+      }
+    }
+  }
+}
+
+.navbar-nav .custom-control-input:checked~.custom-control-label::before{
+  background-color: $roarange !important;
+}
+.custom-control-input:checked~.custom-control-label::before{
+  background-color: $button-color;
+}
+
+.navbar-toggler {
+  background-color: white;
+}
+
+.moremenu {
+  .dropdown-item[aria-current="true"]:focus-within,
+  .dropdown-item[aria-current="true"]:hover,
+  .dropdown-item.active:focus-within,
+  .dropdown-item.active:hover {
+    background-color: $text-highlight-color;
+    border-color: $text-highlight-color;
+    color: black;
+  }
+  .nav-link:hover,
+  .nav-link:focus,
+  .nav-link.active:hover,
+  .nav-link.active:focus {
+    background-color: transparent;
+  }
+}
+
+.list-group-item.active {
+  background-color: $text-highlight-color;
+  border-color: $text-highlight-color;
+  color: $text-color;
+}
+
+.message-app {
+  .btn-link:hover {
+    color: $text-color;
+  }
+  .fa-star {
+    color: $button-color;
+  }
+  .list-group .list-group-item:hover {
+    background-color: $text-highlight-color;
+    color: $text-color;
+  }
+}
+
+body {
+  font-family: $body-font-stack;
+}
+
+body #page,
+#page-my-index {
+  background-color: $growling-gray-light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-stack;
+  font-weight: 700;
+}
+
+a, .btn-link {
+  color: $link-color;
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+:focus-visible {
+  outline: $roarange auto 1px;
+}
+
+.aalink.focus,
+.aalink:focus,
+#page-footer a:not([class]).focus,
+#page-footer a:not([class]):focus,
+.arrow_link.focus,
+.arrow_link:focus,
+a:not([class]).focus,
+a:not([class]):focus,
+.activityinstance > a.focus,
+.activityinstance > a:focus {
+  color: $link-hover-color;
+}
+
+.page-item {
+  .page-link {
+    color: $link-color;
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+  &.active .page-link {
+    background-color: $button-color;
+    border-color: transparent;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.btn {
+  transition: none;
+}
+
+.btn-primary {
+  background-color: $button-color;
+  border-color: transparent;
+  &.disabled,
+  &:disabled {
+    background-color: $button-color;
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
+  &:not(:disabled):not(.disabled) {
+    &:active,
+    &.active {
+      background-color: $button-hover-color;
+    }
+  }
+}
+
+.show > .btn-primary.dropdown-toggle {
+  background-color: $button-hover-color;
+}
+
+.btn-outline-primary {
+  border-color: $button-color;
+  color: $button-color;
+  &:hover {
+    background-color: $button-color;
+    border-color: $button-color;
+    color: white;
+  }
+  &.disabled,
+  &:disabled {
+    background-color: transparent;
+    border-color: $dimmed-text-color;
+    color: $dimmed-text-color;
+  }
+}
+
+.badge-primary {
+  background-color: $button-color;
+}
+
+.sectionbadges .badge-pill {
+  line-height: 1.5;
+}
+
+.content-item-container {
+  &:hover,
+  &.unread:hover {
+    color: black;
+    background-color: $text-highlight-color;
+    a.view-more {
+      color: $link-color;
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+    .content-item-footer .timestamp {
+      color: $text-color;
+    }
+  }
+}
+
+.dropdown-item {
+  &.active,
+  &:active,
+  &:hover,
+  &:focus,
+  &:focus-within {
+    color: black;
+    background-color: $text-highlight-color;
+  }
+}
+
+.moremenu .dropdownmoremenu > .dropdown-menu .dropdown-menu .dropdown-item {
+  &:hover,
+  &:focus {
+    color: black;
+    background-color: $text-highlight-color;
+  }
+}
+
+.form-autocomplete-suggestions li {
+  &:hover,
+  &:focus,
+  &[aria-selected="true"] {
+    background-color: $text-highlight-color;
+    color: $text-color;
+  }
+  &[aria-selected="true"] {
+    box-shadow: 0 0 0 0.2rem $text-highlight-color;
+  }
+}
+
+.nav-pills {
+  .nav-link.active,
+  .show > .nav-link {
+    background-color: $text-highlight-color;
+    color: black;
+  }
+}
+
+.block-add {
+  color: $link-color;
+  i {
+    color: $button-color;
+  }
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    i {
+      color: $button-hover-color;
+    }
+  }
+}
+
+.activity-add {
+  .pluscontainer {
+    background-color: $button-color;
+    border-radius: $border-radius;
+  }
+  i {
+    color: white;
+  }
+  .activity-add-text {
+    color: $link-color;
+  }
+  &:hover,
+  &:focus {
+    .pluscontainer {
+      background-color: $button-hover-color;
+    }
+    .activity-add-text {
+      color: $link-hover-color;
+    }
+  }
+}
+
+.modicon_bigbluebuttonbn .icon {
+  width: 50px;
+  height: 50px;
+  background-color: #0f4d9d;
+  border-radius: $border-radius;
+}
+
+.courseindex {
+  .courseindex-item {
+    border: 3px solid transparent;
+    &.dragging {
+      background-color: white;
+    }
+    &.pageitem {
+      background-color: white;
+      border: 3px solid $roarange;
+      color: $text-color;
+      a {
+        color: $course-index-text-color;
+      }
+      .fa-circle-thin {
+        color: $course-index-text-color;
+      }
+      &:hover,
+      &:focus {
+        background-color: white;
+        color: black;
+        .courseindex-link,
+        .courseindex-chevron {
+          color: black;
+        }
+      }
+      &.dimmed {
+        color: $dimmed-text-color;
+        a {
+          color: $dimmed-text-color;
+        }
+        .fa-circle-thin {
+          color: $dimmed-text-color;
+        }
+        .fa-arrows {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.course-info-container .fa-star {
+  color: $button-color;
+}
+
+.drawer-toggles .drawer-toggler .btn {
+  background-color: white;
+}
+
+.maincalendar {
+  .calendar-controls .arrow_link.bg-primary.text-white {
+    background-color: $button-color !important;
+  }
+  .calendarmonth {
+    td.today {
+      .day-number-circle {
+        background-color: $button-color;
+      }
+      //&.bg-primary.text-white .day-number-circle {
+      //  background-color: white;
+      //  color: black;
+      //}
+    }
+    td.bg-primary.text-white {
+      background-color: $header-gray !important;
+      .aalink.day {
+        color: white;
+      }
+      a:not([class]) {
+        background-color: $header-gray;
+        color: white;
+        &:focus {
+          box-shadow: 0 -0.2rem transparent, 0 0.2rem transparent;
+        }
+      }
+    }
+  }
+  .calendar_event {
+    &_category, &_course, &_site, &_group, &_user {
+      &:hover a {
+        color: $text-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.yui3-skin-sam {
+  .yui3-calendar-day {
+    &-selected {
+      background-color: $text-highlight-color;
+    }
+    &:hover {
+      background-color: $button-color;
+    }
+  }
+}
+
+.yui3-skin-sam .yui3-calendarnav-nextmonth:hover,
+[dir="rtl"] .yui3-skin-sam .yui3-calendarnav-prevmonth:hover,
+.yui3-skin-sam [dir="rtl"] .yui3-calendarnav-prevmonth:hover {
+  border-left-color: black;
+}
+
+.yui3-skin-sam .yui3-calendarnav-prevmonth:hover,
+[dir="rtl"] .yui3-skin-sam .yui3-calendarnav-nextmonth:hover,
+.yui3-skin-sam [dir="rtl"] .yui3-calendarnav-nextmonth:hover {
+  border-right-color: black;
+}
+
+.calendar_event {
+  &_course, &_user {
+    background-color: $text-highlight-color;
+    color: black;
+    .commands a {
+      color: $text-color;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+
+.progress-bar{
+  background-color: $button-color;
+}
+
+.footer-popover {
+  .btn-icon.bg-secondary {
+    background-color: $header-gray !important;
+    i {
+      color: white;
+    }
+    &:hover,
+    &:focus {
+      background-color: black !important;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $roarange;
+    }
+  }
+}
+
+.aabtn.focus,
+.aabtn:focus,
+.btn-link.focus,
+.btn-link:focus,
+.nav-link.focus,
+.nav-link:focus,
+.editor_atto_toolbar button.focus,
+.editor_atto_toolbar button:focus,
+[role="button"].focus,
+[role="button"]:focus,
+.list-group-item-action.focus,
+.list-group-item-action:focus,
+input[type="checkbox"].focus,
+input[type="checkbox"]:focus,
+input[type="radio"].focus,
+input[type="radio"]:focus,
+input[type="file"].focus,
+input[type="file"]:focus,
+input[type="image"].focus,
+input[type="image"]:focus,
+.sr-only-focusable.focus,
+.sr-only-focusable:focus,
+a.dropdown-toggle.focus,
+a.dropdown-toggle:focus,
+.modal-dialog[tabindex="0"].focus,
+.modal-dialog[tabindex="0"]:focus,
+.moodle-dialogue-base .closebutton.focus,
+.moodle-dialogue-base .closebutton:focus,
+button.close.focus,
+button.close:focus,
+.form-autocomplete-selection.focus,
+.form-autocomplete-selection:focus,
+[role="treeitem"]:not([aria-expanded="true"]).focus,
+[role="treeitem"]:not([aria-expanded="true"]):focus,
+.btn-outline-secondary:focus,
+.btn-outline-secondary.focus,
+.btn-primary:focus,
+.btn-primary.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem $roarange;
+}
+
+.aalink.focus,
+.aalink:focus,
+#page-footer a:not([class]).focus,
+#page-footer a:not([class]):focus,
+.arrow_link.focus,
+.arrow_link:focus,
+a:not([class]).focus,
+a:not([class]):focus,
+.activityinstance > a.focus,
+.activityinstance > a:focus {
+  box-shadow: 0 -0.2rem white, 0 0.2rem $roarange;
+}
+
+.sr-only-focusable:focus {
+  color: $text-color;
+  &:hover {
+    color: black
+  }
+}
+
+.fa-external-link,
+.fa-externallink {
+  margin-right: 0px;
+  margin-left: 0.35rem;
+}
+
+//Activity colors
+
+$activity-color-content: #399BE2;
+$activity-color-collaboration: #11A676;
+$activity-color-communication: #11A676;
+$activity-color-assessment: #F7634D;
+
+.activityiconcontainer {
+  &.assessment {
+    background-color: $activity-color-assessment;
+  }
+  &.communication {
+    background-color: $activity-color-communication;
+  }
+  &.collaboration {
+    background-color: $activity-color-collaboration;
+  }
+  &.content {
+    background-color: $activity-color-content;
+  }
+}
+
+.modtype_data .activityiconcontainer, .modicon_data {
+  background-color: $activity-color-assessment !important;
+}
+
+.modtype_forum .activityiconcontainer, .modicon_forum {
+  background-color: $activity-color-assessment !important;
+}
+
+.modtype_glossary .activityiconcontainer, .modicon_glossary {
+  background-color: $activity-color-assessment !important;
+}
+
+.modtype_h5pactivity .activityiconcontainer, .modicon_h5pactivity {
+  background-color: $activity-color-assessment !important;
+}
+
+.modtype_lesson .activityiconcontainer, .modicon_lesson {
+  background-color: $activity-color-assessment !important;
+}
+
+.modtype_lti .activityiconcontainer, .modicon_lti {
+  background-color: $activity-color-communication !important;
+}
+
+.modtype_scorm .activityiconcontainer, .modicon_scorm {
+  background-color: $activity-color-communication !important;
+}
+
+.modtype_wiki .activityiconcontainer, .modicon_wiki {
+  background-color: $activity-color-communication !important;
+}
