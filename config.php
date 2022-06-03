@@ -15,11 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Boost.
- *
- * @package    theme_boost
- * @copyright  2016 Frédéric Massart
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   theme_bengal
+ * @copyright 2022 Max MacCluer
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
@@ -73,3 +71,8 @@ $THEME->haseditswitch = true;
 $THEME->scss = function($theme) {
     return theme_bengal_get_main_scss_content($theme);
 };
+
+// By default, all boost theme do not need their titles displayed.
+$THEME->activityheaderconfig = [
+        'notitle' => true
+];

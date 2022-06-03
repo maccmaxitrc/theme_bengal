@@ -34,14 +34,19 @@ $border-radius: 4px;
   label {
     color: white !important;
   }
-  .login{
-    a{
+  .dropdown-menu {
+    .dropdown-toggle::after {
+      color: black !important;
+    }
+  }
+  .login {
+    a {
       color: white !important;
-      &:hover{
+      &:hover {
         color: white !important;
         text-decoration: none;
       }
-      &:focus{
+      &:focus {
         background-color: transparent;
         box-shadow: 0 0 0 0.2rem $roarange;
       }
@@ -49,10 +54,11 @@ $border-radius: 4px;
   }
 }
 
-.navbar-nav .custom-control-input:checked~.custom-control-label::before{
+.navbar-nav .custom-control-input:checked ~ .custom-control-label::before {
   background-color: $roarange !important;
 }
-.custom-control-input:checked~.custom-control-label::before{
+
+.custom-control-input:checked ~ .custom-control-label::before {
   background-color: $button-color;
 }
 
@@ -299,7 +305,7 @@ a:not([class]):focus,
 // Edit icon
 .activity-item {
   .inplaceeditable .quickeditlink,
-  .afterlink{
+  .afterlink {
     margin: .2rem 0 1.4rem .5rem
   }
 }
@@ -307,10 +313,10 @@ a:not([class]):focus,
 // Completion info margins
 .activity-info {
   .automatic-completion-conditions span:only-child {
-    margin-top:13px !important;
+    margin-top: 13px !important;
   }
   button:only-child {
-    margin-top:10px !important;
+    margin-top: 10px !important;
   }
 }
 
@@ -352,15 +358,22 @@ a:not([class]):focus,
 }
 
 .courseindex {
+  .courseindex-link,
+  .courseindex-chevron {
+    &:hover {
+      color: black !important;
+    }
+  }
   .courseindex-item {
     border: 3px solid transparent;
+    color: black;
     &.dragging {
       background-color: white;
     }
     &.pageitem {
       background-color: white;
       border: 3px solid $roarange;
-      color: $text-color;
+      color: black;
       a {
         color: $course-index-text-color;
       }
@@ -373,7 +386,7 @@ a:not([class]):focus,
         color: black;
         .courseindex-link,
         .courseindex-chevron {
-          color: black;
+          color: $course-index-text-color;
         }
       }
       &.dimmed {
@@ -389,6 +402,21 @@ a:not([class]):focus,
         }
       }
     }
+    &:hover,
+    &:focus {
+      .courseindex-link,
+      .courseindex-chevron,
+      .fa-circle-thin {
+        color: $course-index-text-color;
+      }
+      &.dimmed {
+        .courseindex-link,
+        .courseindex-chevron,
+        .fa-circle-thin {
+          color: $dimmed-text-color;
+        }
+      }
+    }
   }
 }
 
@@ -400,6 +428,15 @@ a:not([class]):focus,
   background-color: white;
 }
 
+.path-grade-report-grader {
+  .gradeparent {
+    overflow:auto;
+    th.header {
+      left: 0;
+    }
+  }
+}
+
 .maincalendar {
   .calendar-controls .arrow_link.bg-primary.text-white {
     background-color: $button-color !important;
@@ -409,10 +446,6 @@ a:not([class]):focus,
       .day-number-circle {
         background-color: $button-color;
       }
-      //&.bg-primary.text-white .day-number-circle {
-      //  background-color: white;
-      //  color: black;
-      //}
     }
     td.bg-primary.text-white {
       background-color: $header-gray !important;
@@ -474,7 +507,7 @@ a:not([class]):focus,
   }
 }
 
-.progress-bar{
+.progress-bar {
   background-color: $button-color;
 }
 
@@ -490,6 +523,26 @@ a:not([class]):focus,
     }
     &:focus {
       box-shadow: 0 0 0 0.2rem $roarange;
+    }
+  }
+}
+
+.bengal-footer {
+  display: flex;
+  .bengal-footer-powered-by {
+    width: auto;
+    div {
+      white-space: nowrap;
+    }
+  }
+  .bengal-footer-logo {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    .icon {
+      width: 40px;
+      height: 39px;
+      margin: 0;
     }
   }
 }
@@ -563,13 +616,14 @@ a:not([class]):focus,
 }
 
 //single section on one page scroll bug
-#region-main{
+#region-main {
   overflow-x: unset;
 }
 
 //Activity colors
 
 $activity-color-content: #399BE2;
+$activity-color-administration: #11A676;
 $activity-color-collaboration: #11A676;
 $activity-color-communication: #11A676;
 $activity-color-assessment: #F7634D;
@@ -577,6 +631,9 @@ $activity-color-assessment: #F7634D;
 .activityiconcontainer {
   &.assessment {
     background-color: $activity-color-assessment;
+  }
+  &.administration {
+    background-color: $activity-color-administration;
   }
   &.communication {
     background-color: $activity-color-communication;

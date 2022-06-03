@@ -30,6 +30,7 @@ $string['brandcolor'] = 'Brand color';
 $string['brandcolor_desc'] = 'The accent color.';
 $string['choosereadme'] = 'The Bengal Theme is a child theme of Boost. It was made for use by Idaho State University.';
 $string['configtitle'] = 'Bengal settings';
+$string['fueledbyisu'] = 'Fueled by <a href=https://isu.edu>Idaho State University</a>';
 $string['generalsettings'] = 'General settings';
 $string['loginbackgroundimage'] = 'Background image for the login page';
 $string['loginbackgroundimage_desc'] = 'The image to display as a background for the login page.';
