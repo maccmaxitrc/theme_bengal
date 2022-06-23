@@ -20,6 +20,7 @@ $border-radius: 4px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 190%;
+  background-color: $header-gray !important;
 }
 
 .navbar-nav {
@@ -51,6 +52,24 @@ $border-radius: 4px;
         box-shadow: 0 0 0 0.2rem $roarange;
       }
     }
+  }
+}
+
+.navbar [data-flexitour="step-background"]{
+  background-color: black !important;
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar-brand {
+    display:flex !important;
+    margin-left: 1.5rem !important;
+    margin-right: 0 !important;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .navbar-brand {
+    display:none !important;
   }
 }
 
@@ -428,13 +447,8 @@ a:not([class]):focus,
   background-color: white;
 }
 
-.path-grade-report-grader {
-  .gradeparent {
-    overflow:auto;
-    th.header {
-      left: 0;
-    }
-  }
+.path-grade-report-grader #page {
+    background-color: white;
 }
 
 .maincalendar {
@@ -615,6 +629,14 @@ a:not([class]):focus,
   margin-left: 0.35rem;
 }
 
+// legacy styling
+.atto_image_button_text-top.img-responsive,
+.atto_image_button_middle.img-responsive,
+.atto_image_button_text-bottom.img-responsive {
+  display: inline-block;
+  max-width: calc(100% - 1em);
+}
+
 //single section on one page scroll bug
 #region-main {
   overflow-x: unset;
@@ -677,3 +699,4 @@ $activity-color-assessment: #F7634D;
 .modtype_wiki .activityiconcontainer, .modicon_wiki {
   background-color: $activity-color-communication !important;
 }
+
