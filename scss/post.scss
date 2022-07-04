@@ -642,6 +642,58 @@ a:not([class]):focus,
   overflow-x: unset;
 }
 
+// Main menu block styling
+.main-menu-content {
+  .fa-arrows:before {
+    content: ""
+  }
+  .activityiconcontainer {
+    display:none;
+  }
+  .text-uppercase.small {
+    display:none;
+  }
+  .modtype_forum, .modtype_url {
+    .activityiconcontainer {
+      display:block;
+    }
+    .text-uppercase.small {
+      display:block;
+    }
+  }
+  .activity-item.activity{
+    border: none;
+  }
+  .activity-item:not(.activityinline) {
+    padding: 0.25rem;
+  }
+  .activity-item .inplaceeditable{
+    align-items:center;
+    margin-left: 1.5rem;
+  }
+  .activity-item .inplaceeditable .quickeditlink, .activity-item .afterlink {
+    margin: 0.8rem 0 0.8rem 0.5rem;
+  }
+}
+.block_site_main_menu.block .content>.unlist>li>.column{
+  margin-bottom: 0;
+}
+#page-site-index {
+  .drawer.drawer-right {
+    width: 450px;
+    max-width: 450px;
+  }
+  @include media-breakpoint-up(lg) {
+    #page.drawers.show-drawer-right {
+      margin-right: 450px;
+      .btn-footer-popover{
+        right: calc(450px + 2rem);
+      }
+    }
+  }
+}
+// End of main menu block styling
+
 //Activity colors
 
 $activity-color-content: #399BE2;
@@ -649,6 +701,7 @@ $activity-color-administration: #11A676;
 $activity-color-collaboration: #11A676;
 $activity-color-communication: #11A676;
 $activity-color-assessment: #F7634D;
+$activity-color-external: #a378ff;
 
 .activityiconcontainer {
   &.assessment {
@@ -688,8 +741,8 @@ $activity-color-assessment: #F7634D;
   background-color: $activity-color-assessment !important;
 }
 
-.modtype_lti .activityiconcontainer, .modicon_lti {
-  background-color: $activity-color-communication !important;
+.modtype_lti .activityiconcontainer, div[class*="modicon_lti"] {
+  background-color: $activity-color-external !important;
 }
 
 .modtype_scorm .activityiconcontainer, .modicon_scorm {
@@ -699,4 +752,3 @@ $activity-color-assessment: #F7634D;
 .modtype_wiki .activityiconcontainer, .modicon_wiki {
   background-color: $activity-color-communication !important;
 }
-
