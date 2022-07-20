@@ -23,6 +23,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['region-side-pre'] = 'Right';
+$string['activitychooserlegend_assessed'] = "Typically assessed";
+$string['activitychooserlegend_notassessed'] = "Not typically assessed";
+$string['activitychooserlegend_externaltool'] = "External tool";
+$string['activitychooserlegend_resource'] = "Resource";
 $string['advancedsettings'] = 'Advanced settings';
 $string['backgroundimage'] = 'Background image';
 $string['backgroundimage_desc'] = 'The image to display as a background of the site. The background image you upload here will override the background image in your theme preset files.';

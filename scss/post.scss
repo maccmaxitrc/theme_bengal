@@ -694,6 +694,46 @@ a:not([class]):focus,
 }
 // End of main menu block styling
 
+.activity-chooser-legend {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 1.5rem 1rem;
+  width: 100%;
+  .legend-item {
+    align-content: center;
+    display: flex;
+    margin-right: .75rem;
+    .legend-icon {
+      border-radius: 4px;
+      display: inline-block;
+      height: 25px;
+      width: 25px;
+      &.assessed {
+        background-color: #F7634D;
+      }
+      &.not-assessed {
+        background-color: #11A676;
+      }
+      &.external-tool {
+        background-color: #a378ff;
+      }
+      &.resource {
+        background-color: #399BE2;
+      }
+    }
+    &.last-legend-item {
+      margin-right: 0;
+    }
+    .legend-equals {
+      margin: auto 5px;
+    }
+    .legend-description {
+      font-size: 80%;
+      margin: auto;
+    }
+  }
+}
+
 //Activity colors
 
 $activity-color-content: #399BE2;

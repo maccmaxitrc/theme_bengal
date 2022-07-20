@@ -77,27 +77,27 @@
         "unsubscribediscussionlink": "https://example.com/mod/discussion/subscribe.php?id=2&d=2"
     }
 }}
-<div class="navbar" style="padding: .5rem 0rem">
-    <a style="margin-right:3px;" target="_blank" href="{{{ courselink }}}">{{{ coursename }}}</a>
+<div class="navbar" style="color: #1d2125; padding: .5rem 0;">
+    <a style="color: #b82b00; margin-right:3px;" target="_blank" href="{{{ courselink }}}">{{{ coursename }}}</a>
     &raquo;
-    <a style="margin-right:3px; margin-left:3px;" target="_blank" href="{{{ forumindexlink }}}">{{# str }} forums, forum {{/ str }}</a>
+    <a style="color: #b82b00; margin-right:3px; margin-left:3px;" target="_blank" href="{{{ forumindexlink }}}">{{# str }} forums, forum {{/ str }}</a>
     &raquo;
-    <a style="margin-right:3px; margin-left:3px;" target="_blank" href="{{{ forumviewlink }}}">{{{ forumname }}}</a>
+    <a style="color: #b82b00; margin-right:3px; margin-left:3px;" target="_blank" href="{{{ forumviewlink }}}">{{{ forumname }}}</a>
 {{# showdiscussionname }}
     &raquo;
-    <a style="margin-left:3px;" href="{{{ discussionlink }}}">{{{ discussionname }}}</a>
+    <a style="color: #b82b00; margin-left:3px;" href="{{{ discussionlink }}}">{{{ discussionname }}}</a>
 {{/ showdiscussionname }}
 </div>
 
 {{> mod_forum/forum_post_email_htmlemail_body }}
 
 <hr/>
-<div class="mdl-align unsubscribelink" style="text-align:center;" >
+<div class="mdl-align unsubscribelink" style="text-align:center;">
 {{# unsubscribeforumlink }}
-    <a style="text-decoration: underline;" href="{{{ unsubscribeforumlink }}}">{{# str }} unsubscribe, forum {{/ str }}</a>&nbsp;
+    <a style="color: #b82b00; text-decoration: underline;" href="{{{ unsubscribeforumlink }}}">{{# str }} unsubscribe, forum {{/ str }}</a>&nbsp;
 {{/ unsubscribeforumlink }}
 {{# unsubscribediscussionlink }}
-    <a style="text-decoration: underline;" href="{{{ unsubscribediscussionlink }}}">{{# str }} unsubscribediscussion, forum {{/ str }}</a>&nbsp;
+    <a style="color: #b82b00; text-decoration: underline;" href="{{{ unsubscribediscussionlink }}}">{{# str }} unsubscribediscussion, forum {{/ str }}</a>&nbsp;
 {{/ unsubscribediscussionlink }}
-    <a style="text-decoration: underline;" href="{{{ forumindexlink }}}">{{# str }} digestmailpost, forum {{/ str }}</a>
+    <a style="color: #b82b00; text-decoration: underline;" href="{{{ forumindexlink }}}">{{# str }} digestmailpost, forum {{/ str }}</a>
 </div>
