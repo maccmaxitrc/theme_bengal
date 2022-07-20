@@ -81,31 +81,37 @@
 <table border="0" cellpadding="3" cellspacing="0" class="forumpost" style="display: block; position: relative; margin: 0 0 1em 0; padding: 6px; border: 1px solid #dee2e6; max-width: 100%;">
     <tr class="header" style="margin-bottom: 3px;">
         <td width="35" valign="top" class="picture left" >
-            <div style="margin-right: 3px;">
+            <div>
                 <div>
-                    {{{ authorpicture }}}
+                    <div>
+                        <div>
+                            <div style="margin-right: 3px;">
+                                {{{ authorpicture }}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </td>
         <td class="topic {{# firstpost }}starter{{/ firstpost }}">
-            <div class="subject" style="font-weight: bold;">
+            <div class="subject" style="color: #1d2125; font-weight: bold;" >
                 {{{ subject }}}
             </div>
-            <div class="author">
+            <div class="author" style="color: #1d2125;">
                 {{# str }} bynameondate, forum, {
-                        "name": {{# quote }}<a target='_blank' href='{{{ authorlink }}}'>{{ authorfullname }}</a>{{/ quote }},
+                        "name": {{# quote }}<a style="color: #b82b00;" target='_blank' href='{{{ authorlink }}}'>{{ authorfullname }}</a>{{/ quote }},
                         "date": {{# quote }}{{ postdate }}{{/ quote }}
                     } {{/ str }}
             </div>
             {{# isprivatereply }}
-            <div class="privatereplyinfo" style="font-size: 80%;">
+            <div class="privatereplyinfo" style="color: #1d2125; font-size: 80%;">
                 {{# str }} postisprivatereply, forum {{/ str }}
             </div>
             {{/ isprivatereply }}
         </td>
     </tr>
     <tr>
-        <td class="left side" valign="top" style="clear: both;">
+        <td class="left side" valign="top" style="color: #b82b00; clear: both;">
             {{# grouppicture }}
                 {{{ grouppicture }}}
             {{/ grouppicture }}
@@ -113,7 +119,7 @@
                 &nbsp;
             {{/ grouppicture }}
         </td>
-        <td class="content" style="width: 100%">
+        <td class="content" style="color: #1d2125; width: 100%;">
             {{# attachments }}
                 <div class="attachments">
                     {{{ attachments }}}
@@ -122,7 +128,7 @@
             {{{ message }}}
             <div class="commands" style="text-align: right;">
                 {{^ firstpost }}
-                    <a target="_blank" href="{{{ parentpostlink }}}">
+                    <a style="color: #b82b00;" target="_blank" href="{{{ parentpostlink }}}">
                         {{# str }} parent, forum {{/ str }}
                     </a>
                     {{# canreply }}
@@ -133,14 +139,14 @@
                 {{/ firstpost }}
                 {{# canreply }}
                     {{^ isprivatereply }}
-                    <a target="_blank" href="{{{ replylink }}}">
+                    <a style="color: #b82b00;" target="_blank" href="{{{ replylink }}}">
                         {{# str }} reply, forum {{/ str }}
                     </a>
                     {{/ isprivatereply }}
                 {{/ canreply }}
             </div>
             <div class="link" style="text-align: right;">
-                <a target="_blank" href="{{{ permalink }}}">
+                <a style="color: #b82b00;" target="_blank" href="{{{ permalink }}}">
                     {{# str }} postincontext, forum {{/ str }}
                 </a>
             </div>
