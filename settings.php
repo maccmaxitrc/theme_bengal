@@ -20,11 +20,6 @@
  * @copyright  2022 Max MacCluer
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-/**
- * @package   theme_boost
- * @copyright 2016 Ryan Wyllie
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
 
 defined('MOODLE_INTERNAL') || die();
 

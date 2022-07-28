@@ -1,4 +1,5 @@
 <?php
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -75,4 +76,14 @@ $THEME->scss = function($theme) {
 // By default, all boost theme do not need their titles displayed.
 $THEME->activityheaderconfig = [
         'notitle' => true
+];
+
+$THEME->layouts = [
+    // Main course page.
+    'course' => array(
+        'file' => 'drawers.php',
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre',
+        'options' => array('langmenu' => true),
+    )
 ];
