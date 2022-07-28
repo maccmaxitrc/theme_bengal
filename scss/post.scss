@@ -15,7 +15,8 @@ $button-hover-color: #b53917;
 
 $border-radius: 4px;
 
-.navbar, #searchform-navbar {
+.navbar,
+#searchform-navbar {
   background-image: url([[pix:theme|bengal-header]]);
   background-repeat: no-repeat;
   background-position: center;
@@ -55,7 +56,8 @@ $border-radius: 4px;
   }
 }
 
-.navbar [data-flexitour="step-background"]{
+// User tour syling for navbar
+.navbar [data-flexitour="step-background"] {
   background-color: black !important;
 }
 
@@ -135,7 +137,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-a, .btn-link {
+a,
+.btn-link {
   color: $link-color;
   &:hover {
     color: $link-hover-color;
@@ -383,46 +386,23 @@ a:not([class]):focus,
       color: black !important;
     }
   }
+  .courseindex-name {
+    color: black !important;
+  }
   .courseindex-item {
-    border: 3px solid transparent;
-    color: black;
-    &.dragging {
-      background-color: white;
-    }
     &.pageitem {
-      background-color: white;
-      border: 3px solid $roarange;
-      color: black;
-      a {
-        color: $course-index-text-color;
-      }
-      .fa-circle-thin {
-        color: $course-index-text-color;
-      }
-      &:hover,
-      &:focus {
-        background-color: white;
-        color: black;
-        .courseindex-link,
-        .courseindex-chevron {
-          color: $course-index-text-color;
-        }
-      }
-      &.dimmed {
-        color: $dimmed-text-color;
-        a {
-          color: $dimmed-text-color;
-        }
-        .fa-circle-thin {
-          color: $dimmed-text-color;
-        }
-        .fa-arrows {
-          color: black;
-        }
+      background-color: #d4441c !important;
+      color: white !important;
+      a,
+      .courseindex-name,
+      .fa-circle-thin,
+      .fa-times {
+        color: white !important;
       }
     }
     &:hover,
     &:focus {
+      color: $course-index-text-color;
       .courseindex-link,
       .courseindex-chevron,
       .fa-circle-thin {
@@ -509,7 +489,8 @@ a:not([class]):focus,
 }
 
 .calendar_event {
-  &_course, &_user {
+  &_course,
+  &_user {
     background-color: $text-highlight-color;
     color: black;
     .commands a {
@@ -625,7 +606,7 @@ a:not([class]):focus,
 
 .fa-external-link,
 .fa-externallink {
-  margin-right: 0px;
+  margin-right: 0;
   margin-left: 0.35rem;
 }
 
@@ -653,7 +634,8 @@ a:not([class]):focus,
   .text-uppercase.small {
     display:none;
   }
-  .modtype_forum, .modtype_url {
+  .modtype_forum,
+  .modtype_url {
     .activityiconcontainer {
       display:block;
     }
@@ -661,21 +643,22 @@ a:not([class]):focus,
       display:block;
     }
   }
-  .activity-item.activity{
+  .activity-item.activity {
     border: none;
   }
   .activity-item:not(.activityinline) {
     padding: 0.25rem;
   }
-  .activity-item .inplaceeditable{
+  .activity-item .inplaceeditable {
     align-items:center;
     margin-left: 1.5rem;
   }
-  .activity-item .inplaceeditable .quickeditlink, .activity-item .afterlink {
+  .activity-item .inplaceeditable .quickeditlink,
+  .activity-item .afterlink {
     margin: 0.8rem 0 0.8rem 0.5rem;
   }
 }
-.block_site_main_menu.block .content>.unlist>li>.column{
+.block_site_main_menu.block .content>.unlist>li>.column {
   margin-bottom: 0;
 }
 #page-site-index {
@@ -694,32 +677,128 @@ a:not([class]):focus,
 }
 // End of main menu block styling
 
+// Course index title (link to course page)
+.drawer.drawer-left {
+  .drawerheader {
+    align-items: flex-start;
+    border-bottom: 1px solid #dee2e6;
+    height: auto;
+    min-height: 60px;
+    overflow: hidden;
+    .drawertoggle{
+      margin-right: 6px;
+      margin-left: 5px;
+      margin-top: 14px;
+      padding: 4px 5px;
+    }
+    .course-index-title {
+      border-radius: $border-radius * 2;
+      color: $text-color;
+      display: flex;
+      height: 100%;
+      margin: .75rem .5rem .5rem 0;
+      padding: .25rem;
+      width: 100%;
+      span {
+        font-family: Roboto Slab, serif;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+      &:hover {
+        color: black;
+        text-decoration: none;
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.2rem $roarange;
+      }
+    }
+  }
+}
+
+.atto_loom_button .icon {
+  margin-top: 1px !important;
+  margin-bottom: 2px !important;
+}
+
+// Activity icon colors
+
+$activity-color-content: #399BE2;
+$activity-color-administration: #11A676;
+$activity-color-collaboration: #11A676;
+$activity-color-communication: #11A676;
+$activity-color-assessment: #F7634D;
+$activity-color-external-tool: #a378ff;
+
+.activityiconcontainer {
+  &.assessment { background-color: $activity-color-assessment; }
+  &.administration { background-color: $activity-color-administration; }
+  &.communication { background-color: $activity-color-communication; }
+  &.collaboration { background-color: $activity-color-collaboration; }
+  &.content { background-color: $activity-color-content; }
+}
+
+.modtype_data .activityiconcontainer,
+.modicon_data {
+  background-color: $activity-color-assessment !important;
+}
+
+.modtype_forum .activityiconcontainer,
+.modicon_forum {
+  background-color: $activity-color-assessment !important;
+}
+
+.modtype_glossary .activityiconcontainer,
+.modicon_glossary {
+  background-color: $activity-color-assessment !important;
+}
+
+.modtype_h5pactivity .activityiconcontainer,
+.modicon_h5pactivity {
+  background-color: $activity-color-assessment !important;
+}
+
+.modtype_lesson .activityiconcontainer,
+.modicon_lesson {
+  background-color: $activity-color-assessment !important;
+}
+
+.modtype_lti .activityiconcontainer,
+div[class*="modicon_lti"] {
+  background-color: $activity-color-external-tool !important;
+}
+
+.modtype_scorm .activityiconcontainer,
+.modicon_scorm {
+  background-color: $activity-color-communication !important;
+}
+
+.modtype_wiki .activityiconcontainer,
+.modicon_wiki {
+  background-color: $activity-color-communication !important;
+}
+
 .activity-chooser-legend {
+  background-color: white;
+  border-radius: $border-radius * 2;
   display: flex;
   justify-content: center;
-  padding: 1rem 1.5rem 1rem;
+  margin: 4px 71px;
+  padding: 12px 34px;
   width: 100%;
   .legend-item {
     align-content: center;
     display: flex;
     margin-right: .75rem;
     .legend-icon {
-      border-radius: 4px;
+      border-radius: $border-radius;
       display: inline-block;
       height: 25px;
       width: 25px;
-      &.assessed {
-        background-color: #F7634D;
-      }
-      &.not-assessed {
-        background-color: #11A676;
-      }
-      &.external-tool {
-        background-color: #a378ff;
-      }
-      &.resource {
-        background-color: #399BE2;
-      }
+      &.assessed { background-color: $activity-color-assessment; }
+      &.not-assessed { background-color: $activity-color-communication; }
+      &.external-tool { background-color: $activity-color-external-tool; }
+      &.resource { background-color: $activity-color-content; }
     }
     &.last-legend-item {
       margin-right: 0;
@@ -732,63 +811,4 @@ a:not([class]):focus,
       margin: auto;
     }
   }
-}
-
-//Activity colors
-
-$activity-color-content: #399BE2;
-$activity-color-administration: #11A676;
-$activity-color-collaboration: #11A676;
-$activity-color-communication: #11A676;
-$activity-color-assessment: #F7634D;
-$activity-color-external: #a378ff;
-
-.activityiconcontainer {
-  &.assessment {
-    background-color: $activity-color-assessment;
-  }
-  &.administration {
-    background-color: $activity-color-administration;
-  }
-  &.communication {
-    background-color: $activity-color-communication;
-  }
-  &.collaboration {
-    background-color: $activity-color-collaboration;
-  }
-  &.content {
-    background-color: $activity-color-content;
-  }
-}
-
-.modtype_data .activityiconcontainer, .modicon_data {
-  background-color: $activity-color-assessment !important;
-}
-
-.modtype_forum .activityiconcontainer, .modicon_forum {
-  background-color: $activity-color-assessment !important;
-}
-
-.modtype_glossary .activityiconcontainer, .modicon_glossary {
-  background-color: $activity-color-assessment !important;
-}
-
-.modtype_h5pactivity .activityiconcontainer, .modicon_h5pactivity {
-  background-color: $activity-color-assessment !important;
-}
-
-.modtype_lesson .activityiconcontainer, .modicon_lesson {
-  background-color: $activity-color-assessment !important;
-}
-
-.modtype_lti .activityiconcontainer, div[class*="modicon_lti"] {
-  background-color: $activity-color-external !important;
-}
-
-.modtype_scorm .activityiconcontainer, .modicon_scorm {
-  background-color: $activity-color-communication !important;
-}
-
-.modtype_wiki .activityiconcontainer, .modicon_wiki {
-  background-color: $activity-color-communication !important;
 }
