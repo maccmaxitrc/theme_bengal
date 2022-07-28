@@ -376,6 +376,7 @@ a:not([class]):focus,
   border-radius: $border-radius;
 }
 
+
 .courseindex {
   .courseindex-link,
   .courseindex-chevron {
@@ -383,46 +384,26 @@ a:not([class]):focus,
       color: black !important;
     }
   }
+  .courseindex-name{
+    color: black !important;
+  }
   .courseindex-item {
-    border: 3px solid transparent;
-    color: black;
-    &.dragging {
-      background-color: white;
-    }
     &.pageitem {
-      background-color: white;
-      border: 3px solid $roarange;
-      color: black;
+      background-color: #d4441c !important;
+      color: white !important;
       a {
-        color: $course-index-text-color;
+        color: white !important;
       }
       .fa-circle-thin {
-        color: $course-index-text-color;
+        color: white !important;
       }
-      &:hover,
-      &:focus {
-        background-color: white;
-        color: black;
-        .courseindex-link,
-        .courseindex-chevron {
-          color: $course-index-text-color;
-        }
-      }
-      &.dimmed {
-        color: $dimmed-text-color;
-        a {
-          color: $dimmed-text-color;
-        }
-        .fa-circle-thin {
-          color: $dimmed-text-color;
-        }
-        .fa-arrows {
-          color: black;
-        }
+      .completioninfo.completion_complete{
+        color: white;
       }
     }
     &:hover,
     &:focus {
+      color: $course-index-text-color;
       .courseindex-link,
       .courseindex-chevron,
       .fa-circle-thin {
