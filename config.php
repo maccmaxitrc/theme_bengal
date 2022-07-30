@@ -76,3 +76,13 @@ $THEME->scss = function($theme) {
 $THEME->activityheaderconfig = [
         'notitle' => true
 ];
+
+$THEME->layouts = [
+    // Main course page.
+    'course' => array(
+        'file' => 'drawers.php',
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre',
+        'options' => array('langmenu' => true),
+    )
+];

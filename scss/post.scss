@@ -397,6 +397,9 @@ a:not([class]):focus,
       .fa-circle-thin {
         color: white !important;
       }
+      .courseindex-name{
+        color: white !important;
+      }
     }
     &:hover,
     &:focus {
@@ -710,6 +713,51 @@ a:not([class]):focus,
       margin: auto;
     }
   }
+}
+
+// Course index title (link to course page)
+.drawer.drawer-left{
+  .drawerheader{
+    align-items: flex-start;
+    border-bottom: 1px solid #dee2e6;
+    height: auto;
+    min-height: 60px;
+    overflow: hidden;
+  }
+  .drawertoggle{
+    margin-right: 6px;
+    margin-left: 5px;
+    margin-top: 14px;
+    padding: 4px 5px;
+  }
+}
+
+.drawer-title{
+  border-radius: .5rem;
+  color: $text-color;
+  display: flex;
+  height: 100%;
+  margin: .75rem .5rem .5rem 0;
+  padding: .25rem;
+  width: 100%;
+  span{
+    font-family: Roboto Slab, serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  &:hover{
+    color: black;
+    text-decoration: none;
+  }
+  &:focus{
+    box-shadow: 0 0 0 0.2rem $roarange;
+  }
+}
+
+.atto_loom_button .icon{
+  margin-top: 1px !important;
+  margin-bottom: 2px !important;
 }
 
 //Activity colors
