@@ -15,10 +15,10 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * A drawer based layout for the boost theme.
+ * A drawer based layout for the bengal theme.
  *
- * @package   theme_boost
- * @copyright 2021 Bas Brands
+ * @package   theme_bengal
+ * @copyright 2022 Max MacCluer
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
