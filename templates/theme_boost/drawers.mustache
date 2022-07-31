@@ -60,7 +60,11 @@
     {{> theme_boost/navbar }}
     {{#courseindex}}
         {{< theme_boost/drawer }}
-            {{$courseindextitle}}<a class="drawer-title" href="{{courselink}}"><span>{{courseshortname}}</span></a>{{/courseindextitle}}
+            {{$courseindextitle}}
+                <a class="course-index-title" href="{{courselink}}">
+                    <span>{{courseshortname}}</span>
+                </a>
+            {{/courseindextitle}}
             {{$id}}theme_boost-drawers-courseindex{{/id}}
             {{$drawerclasses}}drawer drawer-left {{#courseindexopen}}show{{/courseindexopen}}{{/drawerclasses}}
             {{$drawercontent}}

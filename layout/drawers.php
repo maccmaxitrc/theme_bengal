@@ -1,4 +1,5 @@
 <?php
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -15,7 +16,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * A drawer based layout for the bengal theme.
+ * A drawer based layout for the boost theme modified for the bengal theme.
  *
  * @package   theme_bengal
  * @copyright 2022 Max MacCluer
