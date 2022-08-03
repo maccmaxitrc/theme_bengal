@@ -746,6 +746,9 @@ a:not([class]):focus,
   .grader-grading_navigation {
     height: 60px;
     color: white;
+    .btn-link:hover {
+      text-decoration: underline !important;
+    }
     .btn.btn-icon {
       .icon {
         filter: brightness(0) invert(1);
