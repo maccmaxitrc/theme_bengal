@@ -56,7 +56,7 @@ $border-radius: 4px;
   }
 }
 
-// User tour syling for navbar
+// User tour styling for navbar
 .navbar [data-flexitour="step-background"] {
   background-color: black !important;
 }
@@ -618,7 +618,7 @@ a:not([class]):focus,
   max-width: calc(100% - 1em);
 }
 
-//single section on one page scroll bug
+// Single section on one page scroll bug
 #region-main {
   overflow-x: unset;
 }
@@ -629,18 +629,18 @@ a:not([class]):focus,
     content: ""
   }
   .activityiconcontainer {
-    display:none;
+    display: none;
   }
   .text-uppercase.small {
-    display:none;
+    display: none;
   }
   .modtype_forum,
   .modtype_url {
     .activityiconcontainer {
-      display:block;
+      display: block;
     }
     .text-uppercase.small {
-      display:block;
+      display: block;
     }
   }
   .activity-item.activity {
@@ -650,7 +650,7 @@ a:not([class]):focus,
     padding: 0.25rem;
   }
   .activity-item .inplaceeditable {
-    align-items:center;
+    align-items: center;
     margin-left: 1.5rem;
   }
   .activity-item .inplaceeditable .quickeditlink,
@@ -676,6 +676,16 @@ a:not([class]):focus,
   }
 }
 // End of main menu block styling
+
+// Fatal error styling
+div[data-rel="fatalerror"]{
+  .errormessage {
+    margin-bottom: 0;
+  }
+  .errorcode {
+    display: none;
+  }
+}
 
 // Course index title (link to course page)
 .drawer.drawer-left {
@@ -719,6 +729,53 @@ a:not([class]):focus,
 .atto_loom_button .icon {
   margin-top: 1px !important;
   margin-bottom: 2px !important;
+}
+
+// Assignment grading navigation
+.path-mod-assign [data-region="grading-navigation-panel"] {
+  [data-region="user-info"] {
+    .img-rounded {
+      height: 45px;
+      border-radius: 50%;
+      margin-bottom: -6px;
+    }
+    em.nowrap {
+      font-family: $body-font-stack;
+      &:first-of-type {
+        font-size: 15px;
+        small {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+// Whole forum grading navigation
+.path-mod-forum .unified-grader{
+  .grader-grading_navigation {
+    height: 60px;
+    color: white;
+    .btn-link:hover {
+      text-decoration: underline !important;
+    }
+    .btn.btn-icon {
+      .icon {
+        filter: brightness(0) invert(1);
+      }
+      &:focus,
+      &:hover {
+        .icon{
+          filter: unset;
+        }
+      }
+    }
+    .btn-group>.btn:not(:last-child):not(.dropdown-toggle),
+    .btn-group>.btn-group:not(:last-child)>.btn {
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+    }
+  }
 }
 
 // Activity icon colors
