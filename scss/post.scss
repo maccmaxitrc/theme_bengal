@@ -721,6 +721,50 @@ a:not([class]):focus,
   margin-bottom: 2px !important;
 }
 
+// Assignment grading navigation
+.path-mod-assign [data-region="grading-navigation-panel"] {
+  [data-region="user-info"] {
+    .img-rounded {
+      height: 45px;
+      border-radius: 50%;
+    }
+    em.nowrap {
+      font-size: 22px;
+      font-family: $body-font-stack;
+    }
+    em.nowrap:first-of-type {
+      font-size: 15px;
+      small {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// Whole forum grading navigation
+.path-mod-forum .unified-grader{
+  .grader-grading_navigation {
+    height: 60px;
+    color: white;
+    .btn.btn-icon {
+      .icon {
+        filter: brightness(0) invert(1);
+      }
+      &:focus,
+      &:hover {
+        .icon{
+          filter: unset;
+        }
+      }
+    }
+    .btn-group>.btn:not(:last-child):not(.dropdown-toggle),
+    .btn-group>.btn-group:not(:last-child)>.btn {
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+    }
+  }
+}
+
 // Activity icon colors
 
 $activity-color-content: #399BE2;
