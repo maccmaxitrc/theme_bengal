@@ -629,18 +629,18 @@ a:not([class]):focus,
     content: ""
   }
   .activityiconcontainer {
-    display:none;
+    display: none;
   }
   .text-uppercase.small {
-    display:none;
+    display: none;
   }
   .modtype_forum,
   .modtype_url {
     .activityiconcontainer {
-      display:block;
+      display: block;
     }
     .text-uppercase.small {
-      display:block;
+      display: block;
     }
   }
   .activity-item.activity {
@@ -650,7 +650,7 @@ a:not([class]):focus,
     padding: 0.25rem;
   }
   .activity-item .inplaceeditable {
-    align-items:center;
+    align-items: center;
     margin-left: 1.5rem;
   }
   .activity-item .inplaceeditable .quickeditlink,
