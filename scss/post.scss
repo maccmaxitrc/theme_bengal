@@ -56,7 +56,7 @@ $border-radius: 4px;
   }
 }
 
-// User tour syling for navbar
+// User tour styling for navbar
 .navbar [data-flexitour="step-background"] {
   background-color: black !important;
 }
@@ -618,7 +618,7 @@ a:not([class]):focus,
   max-width: calc(100% - 1em);
 }
 
-//single section on one page scroll bug
+// Single section on one page scroll bug
 #region-main {
   overflow-x: unset;
 }
