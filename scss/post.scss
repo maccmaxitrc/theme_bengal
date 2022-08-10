@@ -786,6 +786,7 @@ $activity-color-collaboration: #11A676;
 $activity-color-communication: #11A676;
 $activity-color-assessment: #F7634D;
 $activity-color-external-tool: #a378ff;
+$activity-color-legacy: $dimmed-text-color;
 
 .activityiconcontainer {
   &.assessment { background-color: $activity-color-assessment; }
@@ -833,6 +834,16 @@ div[class*="modicon_lti"] {
 .modtype_wiki .activityiconcontainer,
 .modicon_wiki {
   background-color: $activity-color-communication !important;
+}
+
+.modtype_zoom .activityiconcontainer,
+.modicon_zoom {
+  background-color: $activity-color-legacy !important;
+}
+
+.modtype_hvp .activityiconcontainer,
+.modicon_hvp {
+  background-color: $activity-color-legacy !important;
 }
 
 .activity-chooser-legend {
