@@ -427,8 +427,11 @@ a:not([class]):focus,
   background-color: white;
 }
 
-.path-grade-report-grader #page {
+.path-grade-report-grader,
+.path-question {
+  #page {
     background-color: white;
+  }
 }
 
 .maincalendar {
