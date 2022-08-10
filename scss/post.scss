@@ -324,11 +324,15 @@ a:not([class]):focus,
   padding-top: 7px;
 }
 
-// Edit icon
+// Edit and request conversion icons
 .activity-item {
   .inplaceeditable .quickeditlink,
   .afterlink {
     margin: .2rem 0 1.4rem .5rem
+  }
+  .local-bfaltformat-course-page-icon {
+    margin: .2rem 0 1.4rem 0;
+    padding: 0;
   }
 }
 
