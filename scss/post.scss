@@ -432,6 +432,9 @@ a:not([class]):focus,
   #page {
     background-color: white;
   }
+  .drawer-toggler .icon-no-margin {
+    background-color: $text-highlight-color !important;
+  }
 }
 
 .maincalendar {
