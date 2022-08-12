@@ -432,7 +432,8 @@ a:not([class]):focus,
 }
 
 .path-grade-report-grader,
-.path-question {
+.path-question,
+#page-mod-attendance-password {
   #page {
     background-color: white;
   }
@@ -672,11 +673,11 @@ a:not([class]):focus,
   margin-bottom: 0;
 }
 #page-site-index {
-  .drawer.drawer-right {
-    width: 450px;
-    max-width: 450px;
-  }
   @include media-breakpoint-up(lg) {
+    .drawer.drawer-right {
+      width: 450px;
+      max-width: 450px;
+    }
     #page.drawers.show-drawer-right {
       margin-right: 450px;
       .btn-footer-popover{
@@ -685,6 +686,7 @@ a:not([class]):focus,
     }
   }
 }
+
 // End of main menu block styling
 
 // Fatal error styling
@@ -785,6 +787,158 @@ div[data-rel="fatalerror"]{
       border-top-right-radius: 50%;
       border-bottom-right-radius: 50%;
     }
+  }
+}
+
+// Assignment grading styling
+.path-mod-assign [data-region="review-panel"].collapsed+[data-region="grade-panel"] [data-region="grade"],
+.path-mod-assign [data-region="grade-panel"].fullwidth [data-region="grade"] {
+  max-width: none;
+}
+.path-mod-assign [data-region="grade-panel"] {
+  .gradingform_rubric .criterion {
+    .description {
+      max-width: 700px;
+    }
+    .levels {
+      table {
+        min-height: 132px;
+      }
+      .level {
+        min-width: 90px;
+      }
+    }
+    .remark textarea {
+      min-width: 250px;
+    }
+  }
+  div.submissionstatustable,
+  h3,
+  #fitem_id_workflowstate,
+  #fitem_id_currentgrade,
+  :not(.popout)#fitem_id_assignfeedbackcomments_editor,
+  #id_attemptsettings>legend,
+  #id_attemptsettings .fcontainer
+  {
+    width: 800px;
+  }
+  #fitem_id_advancedgrading {
+    width: fit-content;
+  }
+  .fitem.popout {
+    overflow: auto;
+  }
+  div.submissionstatustable,
+  #fitem_id_advancedgrading,
+  h3,
+  #fitem_id_workflowstate,
+  #fitem_id_currentgrade,
+  #fitem_id_assignfeedbackcomments_editor,
+  #id_attemptsettings>legend,
+  #id_attemptsettings .fcontainer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  [data-region="attempt-chooser"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+}
+.path-mod-assign [data-region="review-panel"]:not(.collapsed)+[data-region="grade-panel"] {
+  div.submissionstatustable,
+  h3,
+  #fitem_id_workflowstate,
+  #fitem_id_currentgrade,
+  #fitem_id_assignfeedbackcomments_editor,
+  #id_attemptsettings>legend,
+  #id_attemptsettings .fcontainer
+  {
+    width: unset;
+  }
+}
+// End of assignment grading styling
+
+// Fix for external tool iframe being too small on some screen sizes
+#contentframe {
+  min-height: 600px;
+}
+
+// h5p wrapper fix
+.h5p-iframe-wrapper {
+  max-width: 1092px !important;
+  margin: auto !important;
+}
+body.h5p-embed #page{
+  background-color:white;
+}
+
+// Adjust QR code sizing
+[alt="QR Code"] {
+  max-width:450px;
+}
+@media (max-width: 576px) {
+  [alt="QR Code"]{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:95%;
+  }
+}
+
+// Fix for activity completion on labels
+.modtype_label {
+  .activity-item {
+    display: flex;
+    direction: rtl;
+    .activity-basis {
+      div:first-child{
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      direction: ltr;
+    }
+    .description {
+      direction: ltr;
+      display: flex;
+      margin-right: auto;
+      .description-inner {
+        display: flex;
+        .no-overflow {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+      }
+    }
+    .activity-actions {
+      margin-top: auto;
+      margin-bottom: auto;
+      padding-top: 0;
+    }
+  }
+  .activity-info button:only-child {
+    margin-top: 0 !important;
+  }
+}
+.editing .section .activity.modtype_label .contentwithoutlink {
+  padding-right: 0 !important;
+}
+// End of label fix
+
+// Section name edit button
+.sectionname .inplaceeditable .quickeditlink {
+  display: inline-flex;
+  .quickediticon {
+    display: inline-flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    .icon {
+      margin-left: 8px;
+    }
+  }
+  &:focus {
+    color: $text-color;
   }
 }
 
