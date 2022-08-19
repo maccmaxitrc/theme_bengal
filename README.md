@@ -21,14 +21,15 @@ Bengal is a Moodle theme developed by and for Idaho State University -- It bring
    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet"></code></pre>
    
-5. Add ISU Resources links:
+5. Add ISU resources links:
 
    *Site Administration > Appearance > Theme Settings > Custom menu options*:
 
-   <pre><code>ISU Resources
-   -Counseling Services|https://www.isu.edu/ctc/"target="_blank|ISU Counseling Services
+   <pre><code>ISU resources
+   -Counseling Services|https://www.isu.edu/ctc/" target="_blank|ISU Counseling Services
    -Disability Services|https://isu.edu/disabilityservices/" target="_blank|ISU Disability Services
-   -IT Service Desk|https://tigertracks.isu.edu/TDClient/Home/" target="_blank|IT Service Desk
+   -Moodle ISU Guides|https://tigertracks.isu.edu/TDClient/1950/Portal/KB/&#63CategoryID=14513" target="_blank|Moodle ISU Guides
    -Student Success Center|http://isu.edu/success" target="_blank|ISU Student Success Center
+   -Tech Support|https://tigertracks.isu.edu/TDClient/Home/" target="_blank|Tech Support
    -Technology, Policies and Resources|https://isu.edu/itrc/elearning-technology-policies-and-resources/" target="_blank|Accessibility/Privacy Policies
    Help|#" onclick="(Tawk_API.toggle())|Moodle ISU Support</code></pre>

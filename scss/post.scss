@@ -222,8 +222,13 @@ a:not([class]):focus,
   }
 }
 
-.badge-primary {
-  background-color: $button-color;
+.badge-primary,
+.bg-primary {
+  background-color: $button-color !important;
+}
+.message-app .list-group .list-group-item:hover .badge-primary {
+  background-color: $button-color !important;
+  color: white !important;
 }
 
 .sectionbadges .badge-pill {
@@ -324,18 +329,6 @@ a:not([class]):focus,
   padding-top: 7px;
 }
 
-// Edit and request conversion icons
-.activity-item {
-  .inplaceeditable .quickeditlink,
-  .afterlink {
-    margin: .2rem 0 1.4rem .5rem
-  }
-  .local-bfaltformat-course-page-icon {
-    margin: .2rem 0 1.4rem 0;
-    padding: 0;
-  }
-}
-
 // Completion info margins
 .activity-info {
   .automatic-completion-conditions span:only-child {
@@ -423,8 +416,10 @@ a:not([class]):focus,
   }
 }
 
-.course-info-container .fa-star {
-  color: $button-color;
+[data-region="favourite-icon"] {
+  .fa-star {
+    color: $button-color;
+  }
 }
 
 .drawer-toggles .drawer-toggler .btn {
@@ -664,7 +659,6 @@ a:not([class]):focus,
     align-items: center;
     margin-left: 1.5rem;
   }
-  .activity-item .inplaceeditable .quickeditlink,
   .activity-item .afterlink {
     margin: 0.8rem 0 0.8rem 0.5rem;
   }
@@ -815,12 +809,16 @@ div[data-rel="fatalerror"]{
   div.submissionstatustable,
   h3,
   #fitem_id_workflowstate,
+  #fitem_id_grade,
   #fitem_id_currentgrade,
   :not(.popout)#fitem_id_assignfeedbackcomments_editor,
   #id_attemptsettings>legend,
   #id_attemptsettings .fcontainer
   {
     width: 800px;
+  }
+  #fitem_id_grade {
+    padding-bottom: 12px;
   }
   #fitem_id_advancedgrading {
     width: fit-content;
@@ -832,6 +830,7 @@ div[data-rel="fatalerror"]{
   #fitem_id_advancedgrading,
   h3,
   #fitem_id_workflowstate,
+  #fitem_id_grade,
   #fitem_id_currentgrade,
   #fitem_id_assignfeedbackcomments_editor,
   #id_attemptsettings>legend,
@@ -902,12 +901,13 @@ body.h5p-embed #page{
     .description {
       direction: ltr;
       display: flex;
-      margin-right: auto;
+      width: 100%;
       .description-inner {
         display: flex;
         .no-overflow {
           margin-top: auto;
           margin-bottom: auto;
+          overflow: unset;
         }
       }
     }
@@ -940,6 +940,16 @@ body.h5p-embed #page{
   &:focus {
     color: $text-color;
   }
+}
+
+// "Jump to" section drop down
+.jumpmenu {
+  max-width: 600px;
+}
+
+// Main forum page width
+#page-mod-forum-view #page.drawers .main-inner {
+  max-width: 950px;
 }
 
 // Activity icon colors
@@ -1026,6 +1036,8 @@ div[class*="modicon_lti"] {
       border-radius: $border-radius;
       display: inline-block;
       height: 25px;
+      margin: auto;
+      min-width: 25px;
       width: 25px;
       &.assessed { background-color: $activity-color-assessment; }
       &.not-assessed { background-color: $activity-color-communication; }
@@ -1041,6 +1053,30 @@ div[class*="modicon_lti"] {
     .legend-description {
       font-size: 80%;
       margin: auto;
+    }
+  }
+}
+
+// Fix for activity chooser on smaller screens
+@include media-breakpoint-down(md){
+  .modal-dialog {
+    max-width: 654px;
+  }
+  .activity-chooser-legend {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .activity-chooser-legend {
+    width: 241px;
+    display: block;
+    .legend-icon {
+      margin: 3px 0;
+      padding: 0;
+    }
+    .legend-description {
+      margin-left: 0 !important;
     }
   }
 }
