@@ -121,6 +121,9 @@ $border-radius: 4px;
     background-color: $text-highlight-color;
     color: $text-color;
   }
+  .message {
+    overflow-wrap: break-word;
+  }
 }
 
 body {
@@ -643,6 +646,8 @@ a:not([class]):focus,
   .modtype_forum,
   .modtype_url {
     .activityiconcontainer {
+      max-width: 50px;
+      max-height: 50px;
       display: block;
     }
     .text-uppercase.small {
@@ -812,9 +817,8 @@ div[data-rel="fatalerror"]{
   #fitem_id_grade,
   #fitem_id_currentgrade,
   :not(.popout)#fitem_id_assignfeedbackcomments_editor,
-  #id_attemptsettings>legend,
-  #id_attemptsettings .fcontainer
-  {
+  #id_attemptsettings > legend,
+  #id_attemptsettings .fcontainer {
     width: 800px;
   }
   #fitem_id_grade {
@@ -833,7 +837,7 @@ div[data-rel="fatalerror"]{
   #fitem_id_grade,
   #fitem_id_currentgrade,
   #fitem_id_assignfeedbackcomments_editor,
-  #id_attemptsettings>legend,
+  #id_attemptsettings > legend,
   #id_attemptsettings .fcontainer {
     margin-left: auto;
     margin-right: auto;
@@ -845,15 +849,14 @@ div[data-rel="fatalerror"]{
     width: fit-content;
   }
 }
-.path-mod-assign [data-region="review-panel"]:not(.collapsed)+[data-region="grade-panel"] {
+.path-mod-assign [data-region="review-panel"]:not(.collapsed) + [data-region="grade-panel"] {
   div.submissionstatustable,
   h3,
   #fitem_id_workflowstate,
   #fitem_id_currentgrade,
   #fitem_id_assignfeedbackcomments_editor,
-  #id_attemptsettings>legend,
-  #id_attemptsettings .fcontainer
-  {
+  #id_attemptsettings > legend,
+  #id_attemptsettings .fcontainer {
     width: unset;
   }
 }
@@ -950,6 +953,11 @@ body.h5p-embed #page{
 // Main forum page width
 #page-mod-forum-view #page.drawers .main-inner {
   max-width: 950px;
+}
+
+// Default completion icons
+#page-course-editdefaultcompletion .modules img {
+  max-width: 24px;
 }
 
 // Activity icon colors
