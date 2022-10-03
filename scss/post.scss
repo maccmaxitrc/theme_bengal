@@ -960,8 +960,71 @@ body.h5p-embed #page{
   max-width: 24px;
 }
 
-// Activity icon colors
+// NCLEX folder styling
+.nclex-folder {
+  display:flex;
+  flex-direction: column;
+  .list-group-item {
+    border: 1px solid $dimmed-text-color !important;
+    border-bottom: 1px solid $text-color !important;
+    border-radius: 6px 6px 0 0 !important;
+    color: $dimmed-text-color;
+    font-weight: bold;
+    margin-right: 3px;
+    padding: 0.25rem 1rem;
+    width: fit-content;
+    &:last-child { margin-right: 0px }
+    &:hover {
+      background-color: white;
+      color: $text-color;
+    }
+    &:active { background-color: inherit; }
+    &.active {
+      background-color: white !important;
+      border-color: $text-color !important;
+      border-bottom: 1px solid white !important;
+      color: $text-color;
+      margin-left: 0 !important;
+    }
+  }
+  .list-group-item-action:focus {
+    background-color: white;
+    box-shadow: none !important;
+    color: $text-color;
+  }
+  .tab-content {
+    background-color: white;
+    border: 1px solid $text-color;
+    border-radius: 0 6px 0 0;
+    padding: 1rem 1rem;
+    margin-top: -1px;
+    margin-bottom: 1rem;
+    max-width: 750px;
+  }
+}
 
+// Hide content in quiz feedback
+.feedback {
+  .nclex-folder {
+    display: none;
+  }
+}
+
+// Makes scrollbars bigger in Chrome
+#page.drawers, .drawercontent {
+  &::-webkit-scrollbar {
+    width:17px;
+  }
+}
+
+// Makes scrollbars bigger in Firefox
+#page.drawers,
+.drawercontent {
+  scrollbar-width: auto;
+  scrollbar-color: grey white;
+}
+
+// Activity icon colors
 $activity-color-content: #399BE2;
 $activity-color-administration: #11A676;
 $activity-color-collaboration: #11A676;
@@ -970,6 +1033,7 @@ $activity-color-assessment: #F7634D;
 $activity-color-external-tool: #a378ff;
 $activity-color-legacy: $dimmed-text-color;
 
+// Define activity categories
 .activityiconcontainer {
   &.assessment { background-color: $activity-color-assessment; }
   &.administration { background-color: $activity-color-administration; }
@@ -978,6 +1042,7 @@ $activity-color-legacy: $dimmed-text-color;
   &.content { background-color: $activity-color-content; }
 }
 
+// Define icons that deviate from their category
 .modtype_data .activityiconcontainer,
 .modicon_data {
   background-color: $activity-color-assessment !important;
@@ -1028,6 +1093,8 @@ div[class*="modicon_lti"] {
   background-color: $activity-color-legacy !important;
 }
 
+// Activity chooser custom legend
+// implemented in templates/core_course/activitychooser.mustache
 .activity-chooser-legend {
   background-color: white;
   border-radius: $border-radius * 2;
