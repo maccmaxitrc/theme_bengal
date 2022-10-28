@@ -1,2 +1,7 @@
 $primary: #f47920;
 $course-content-maxwidth: 950px;
+
+@font-face {
+  font-family: 'text-security-disc';
+  src: url([[font:theme|text-security-disc-compat.woff2]]) format('woff2');
+}

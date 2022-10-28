@@ -634,6 +634,9 @@ a:not([class]):focus,
 
 // Main menu block styling
 .main-menu-content {
+  .editing_move_activity {
+    position: static !important;
+  }
   .fa-arrows:before {
     content: ""
   }
@@ -660,10 +663,6 @@ a:not([class]):focus,
   .activity-item:not(.activityinline) {
     padding: 0.25rem;
   }
-  .activity-item .inplaceeditable {
-    align-items: center;
-    margin-left: 1.5rem;
-  }
   .activity-item .afterlink {
     margin: 0.8rem 0 0.8rem 0.5rem;
   }
@@ -685,7 +684,6 @@ a:not([class]):focus,
     }
   }
 }
-
 // End of main menu block styling
 
 // Fatal error styling
@@ -794,7 +792,9 @@ div[data-rel="fatalerror"]{
 .path-mod-assign [data-region="grade-panel"].fullwidth [data-region="grade"] {
   max-width: none;
 }
-.path-mod-assign [data-region="grade-panel"] {
+.path-mod-assign [data-region="grade-panel"],
+#page-mod-assign-view .submissionsummarytable,
+#page-mod-assign-view .feedbacktable {
   .gradingform_rubric .criterion {
     .description {
       max-width: 700px;
