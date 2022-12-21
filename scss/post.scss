@@ -15,6 +15,15 @@ $button-hover-color: #b53917;
 
 $border-radius: 4px;
 
+// Page width overrides
+#page-mod-forum-view,
+#page-mod-feedback-analysis_course
+{
+  #page.drawers .main-inner {
+    max-width: 950px;
+  }
+}
+
 .navbar,
 #searchform-navbar {
   background-image: url([[pix:theme|bengal-header]]);
@@ -261,6 +270,10 @@ a:not([class]):focus,
   &:hover,
   &:focus,
   &:focus-within {
+    a {
+      color: black;
+      text-decoration: none;
+    }
     color: black;
     background-color: $text-highlight-color;
   }
@@ -903,10 +916,12 @@ body.h5p-embed #page{
     }
     .description {
       direction: ltr;
-      display: flex;
+      // display: flex;
+      margin-top: auto;
+      margin-bottom: auto;
       width: 100%;
       .description-inner {
-        display: flex;
+        // display: flex;
         .no-overflow {
           margin-top: auto;
           margin-bottom: auto;
@@ -948,11 +963,6 @@ body.h5p-embed #page{
 // "Jump to" section drop down
 .jumpmenu {
   max-width: 600px;
-}
-
-// Main forum page width
-#page-mod-forum-view #page.drawers .main-inner {
-  max-width: 950px;
 }
 
 // Default completion icons
@@ -1022,6 +1032,59 @@ body.h5p-embed #page{
 .drawercontent {
   scrollbar-width: auto;
   scrollbar-color: grey white;
+}
+
+// bf alt format icon styling
+.local-bfaltformat-course-page-icon,
+.local-bfaltformat-course-page-icon + .afterlink {
+  padding-top: 4px;
+}
+
+// Fix for scrollbars showing up on MC questions
+.que.multichoice .ablock {
+  overflow: visible;
+}
+
+// Course Eval print styles
+@media print {
+  [id^="page-mod-feedback-analysis"] {
+    .activity-header,
+    [id^="form_autocomplete_input"],
+    .form-autocomplete-downarrow,
+    .btn,
+    a,
+    #jump-to-activity,
+    #page-footer {
+      display:none;
+    }
+    .badge {
+      color: #1d2125;
+    }
+    #page.drawers .main-inner {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    #page-header{
+      display:block !important;
+      .breadcrumb,.activityiconcontainer {
+        display: none;
+      }
+    }
+    // Fix for extra pages printed in chrome
+    .chartjs-size-monitor-expand > div {
+      height: auto !important;
+    }
+  }
+}
+
+// Fix for feedback analysis charts being too big
+.path-mod-feedback .chart-image {
+  max-width: 600px;
+}
+
+.atto_loom_button .icon{
+  margin-top: 1px !important;
+  margin-bottom: 2px !important;
 }
 
 // Activity icon colors
