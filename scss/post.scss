@@ -1082,9 +1082,18 @@ body.h5p-embed #page{
   max-width: 600px;
 }
 
-.atto_loom_button .icon{
-  margin-top: 1px !important;
-  margin-bottom: 2px !important;
+// Make certain icons in the gradebook darker
+.gradeitemheader {
+  .icon[alt="Simple weighted mean of grades"],
+  .icon[alt="Weighted mean of grades"],
+  .icon[alt="Natural"] {
+    filter: brightness(0) invert(0);
+  }
+}
+
+// Fix for quiz timer blocking quiz
+#quiz-timer-wrapper {
+  pointer-events: none;
 }
 
 // Activity icon colors
