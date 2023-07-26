@@ -340,18 +340,11 @@ a:not([class]):focus,
   padding: .75rem;
 }
 
-// Move activity icons to center
-.activity-item .activity-actions {
-  padding-top: 7px;
-}
 
 // Completion info margins
 .activity-info {
   .automatic-completion-conditions span:only-child {
-    margin-top: 13px !important;
-  }
-  button:only-child {
-    margin-top: 10px !important;
+    margin-top: 3px !important;
   }
 }
 
@@ -362,17 +355,51 @@ a:not([class]):focus,
   margin-top: 0.2rem;
 }
 
-.activity-add {
-  padding: 20px !important;
-  .pluscontainer {
-    background-color: $button-color;
-    border-radius: $border-radius;
+// Add activity button styling
+//.activity div.divider button i.icon {
+//  height: 16px !important;
+//  width: 16px !important;
+//  font-size: 16px !important;
+//  position: static;
+//}
+.activity-add .pluscontainer,
+.activity div.divider button {
+  border-radius: $border-radius !important;
+  padding: 8px 8px 8px 8px !important;
+}
+
+.activity-add .pluscontainer,
+.block-add .pluscontainer {
+  border: none;
+}
+
+.activity div.divider button {
+  left: calc(49%);
+  i.icon {
+    color: $button-color;
+    height: 16px !important;
+    width: 16px !important;
+    font-size: 16px !important;
+    position: static;
+    margin: 0 !important;
   }
+  &:hover{
+    background-color: #fde4d2;
+    i.icon {
+      color: $button-hover-color;
+    }
+  }
+}
+
+.activity-add {
   i {
     color: white;
   }
   .activity-add-text {
     color: $link-color;
+  }
+  .pluscontainer{
+    background-color: $button-color;
   }
   &:hover,
   &:focus {
@@ -384,10 +411,11 @@ a:not([class]):focus,
     }
   }
 }
+// end of activity button styling
 
 .modicon_bigbluebuttonbn .icon {
-  width: 50px;
-  height: 50px;
+  width: 16px;
+  height: 16px;
   background-color: #0f4d9d;
   border-radius: $border-radius;
 }
@@ -1094,6 +1122,77 @@ body.h5p-embed #page{
 // Fix for quiz timer blocking quiz
 #quiz-timer-wrapper {
   pointer-events: none;
+}
+
+// Styling for down arrow icon
+i.icon.fa.fa-long-arrow-down.fa-fw {
+  color: $button-color;
+}
+
+// Fix spacing between lesson buttons
+#page-mod-lesson-view .branchbuttoncontainer .singlebutton button[type="submit"] {
+  margin: 3px 0;
+}
+
+// Bulk edit button styling
+#page .text-primary {
+  color: $link-color !important;
+  &:hover {
+    color: $link-hover-color !important;
+  }
+}
+
+// Secondary button styling
+.block_myoverview .whitebutton .btn-secondary {
+  color: $text-color;
+  background-color: #ced4da;
+  border-color: #ced4da;
+  &:hover {
+    background-color: #b1bbc4;
+    border-color: #aab4bf;
+  }
+}
+
+// Primary button styling
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show>.btn-outline-primary.dropdown-toggle {
+  background-color: $button-color;
+  border-color: $button-color;
+}
+
+// activity card resizing to match upcoming boost update
+.section {
+  .activityiconcontainer {
+    height: 30px;
+    width: 30px;
+  }
+  .activitytitle .text-uppercase.small {
+    display:none;
+  }
+  img.activityicon {
+    height: 16px !important;
+    width: 16px !important;
+  }
+}
+.activity-item .activity-actions .action-menu .btn.btn-icon {
+  height: 31px;
+  width: 31px;
+}
+.path-mod .page-context-header .page-header-headings{
+  display: flex;
+  .h2 {
+    margin: auto 0 auto;
+  }
+  .text-uppercase.small {
+    display: none
+  }
+}
+
+// Fix for large icons on competencies page
+[data-region="coursecompetencyactivities"] img {
+  max-width: 24px;
+  max-height: 24px;
 }
 
 // Activity icon colors
