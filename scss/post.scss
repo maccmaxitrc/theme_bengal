@@ -20,7 +20,7 @@ $border-radius: 4px;
 #page-mod-feedback-analysis_course
 {
   #page.drawers .main-inner {
-    max-width: 950px;
+    max-width: 830px;
   }
 }
 
@@ -1143,7 +1143,17 @@ i.icon.fa.fa-long-arrow-down.fa-fw {
 }
 
 // Secondary button styling
-.block_myoverview .whitebutton .btn-secondary {
+.block_myoverview .whitebutton .btn-secondary,
+.presetsactions .dropdown-toggle,
+.presetsactions .dropdown-toggle:hover,
+.presetsactions .show>.btn-secondary.dropdown-toggle,
+.entriesactions .dropdown-toggle,
+.entriesactions .dropdown-toggle:hover,
+.entriesactions .show>.btn-secondary.dropdown-toggle,
+#page-mod-data-view .whitebutton .btn-secondary,
+#page-mod-data-preset .whitebutton .btn-secondary,
+#page-mod-data-field- .whitebutton .btn-secondary,
+#page-mod-data-templates .whitebutton .btn-secondary {
   color: $text-color;
   background-color: #ced4da;
   border-color: #ced4da;
@@ -1166,6 +1176,10 @@ i.icon.fa.fa-long-arrow-down.fa-fw {
   .activityiconcontainer {
     height: 30px;
     width: 30px;
+    margin-right: .5rem !important;
+  }
+  .activityname {
+    margin-top: 2px;
   }
   .activitytitle .text-uppercase.small {
     display:none;
@@ -1186,6 +1200,24 @@ i.icon.fa.fa-long-arrow-down.fa-fw {
   }
   .text-uppercase.small {
     display: none
+  }
+}
+
+// upcoming styling for grade report activity cards
+.path-grade-report-summary {
+  .activityiconcontainer {
+    height: 30px;
+    width: 30px;
+  }
+  .page-header-headings {
+    padding-top: 3px;
+    .text-uppercase.small {
+      display: none;
+    }
+  }
+  img.activityicon {
+    height: 16px !important;
+    width: 16px !important;
   }
 }
 
