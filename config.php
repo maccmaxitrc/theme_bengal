@@ -36,8 +36,8 @@ $THEME->sheets = [];
 
 // This is a setting that can be used to provide some styling to the content in the TinyMCE text editor. This is no longer the
 // default text editor and "Atto" does not need this setting so we won't provide anything. If we did it would work the same
-// as the previous setting - listing a file in the /styles/ folder.
-$THEME->editor_sheets = [];
+// as the previous setting - listing a file in the /style/ folder.
+$THEME->editor_sheets = ['editor'];
 
 // This is a critical setting. We want to inherit from theme_boost because it provides a great starting point for SCSS bootstrap4
 // themes. We could add more than one parent here to inherit from multiple parents, and if we did they would be processed in
