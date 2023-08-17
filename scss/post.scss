@@ -930,48 +930,6 @@ body.h5p-embed #page{
   }
 }
 
-// Fix for activity completion on labels
-.modtype_label {
-  .activity-item {
-    display: flex;
-    direction: rtl;
-    .activity-basis {
-      div:first-child{
-        margin-top: auto;
-        margin-bottom: auto;
-      }
-      direction: ltr;
-    }
-    .description {
-      direction: ltr;
-      // display: flex;
-      margin-top: auto;
-      margin-bottom: auto;
-      width: 100%;
-      .description-inner {
-        // display: flex;
-        .no-overflow {
-          margin-top: auto;
-          margin-bottom: auto;
-          overflow: unset;
-        }
-      }
-    }
-    .activity-actions {
-      margin-top: auto;
-      margin-bottom: auto;
-      padding-top: 0;
-    }
-  }
-  .activity-info button:only-child {
-    margin-top: 0 !important;
-  }
-}
-.editing .section .activity.modtype_label .contentwithoutlink {
-  padding-right: 0 !important;
-}
-// End of label fix
-
 // Section name edit button
 .sectionname .inplaceeditable .quickeditlink {
   display: inline-flex;
