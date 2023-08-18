@@ -1197,6 +1197,45 @@ i.icon.fa.fa-long-arrow-down.fa-fw {
   max-width: calc(100% - 1em);
 }
 
+// Fix for bullet item bottom margin on course page
+.section .description-inner {
+  ul, ol {
+    margin-bottom: 1rem;
+    ul, ol {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// External tool styling
+.modtype_lti .activityiconcontainer,
+.modicon_lti.activityiconcontainer {
+  img {
+    filter: brightness(0) invert(1);
+  }
+}
+
+// Fix for tinymce editor too small in some places
+.tox.tox-tinymce {
+  min-height: 243px;
+}
+
+// Book TOC subchapter styling
+.path-mod-book .book_toc ul ul {
+  padding-left: 20px;
+}
+
+// Fix for label styling while editing
+.editing .section .label .contentwithoutlink,
+.editing .section .label .activityinstance {
+  padding-right: 32px;
+}
+
+// Fix for long names in drop downs like grader single view
+.tertiary-navigation .btn>div {
+  overflow: hidden;
+}
+
 // Activity icon colors
 $activity-color-content: #399BE2;
 $activity-color-administration: #11A676;
