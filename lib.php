@@ -23,6 +23,10 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+// Theme constants..
+define('THEME_BENGAL_SETTING_SELECT_YES', 'yes');
+define('THEME_BENGAL_SETTING_SELECT_NO', 'no');
+
 function theme_bengal_get_main_scss_content($theme) {
     global $CFG;
 

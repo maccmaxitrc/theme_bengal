@@ -24,6 +24,14 @@
 defined('MOODLE_INTERNAL') || die();
 
 if ($ADMIN->fulltree) {
+
+    require_once($CFG->dirroot . '/theme/bengal/lib.php');
+
+    // Prepare options array for select settings.
+    // Due to MDL-58376, we will use binary select settings instead of checkbox settings throughout this theme.
+    $yesnooption = array(THEME_BENGAL_SETTING_SELECT_YES => get_string('yes'),
+            THEME_BENGAL_SETTING_SELECT_NO => get_string('no'));
+
     $settings = new theme_boost_admin_settingspage_tabs('themesettingbengal', get_string('configtitle', 'theme_bengal'));
     $page = new admin_settingpage('theme_bengal_general', get_string('generalsettings', 'theme_bengal'));
 
@@ -33,6 +41,14 @@ if ($ADMIN->fulltree) {
     $default = 'navigation,settings,course_list,section_links';
     $setting = new admin_setting_configtext('theme_bengal/unaddableblocks',
             get_string('unaddableblocks', 'theme_bengal'), get_string('unaddableblocks_desc', 'theme_bengal'), $default, PARAM_TEXT);
+    $page->add($setting);
+
+    // Setting: scroll-spy.
+    $name = 'theme_bengal/scrollspy';
+    $title = get_string('scrollspysetting', 'theme_bengal', null, true);
+    $description = get_string('scrollspysetting_desc', 'theme_bengal', null, true);
+    $setting = new admin_setting_configselect($name, $title, $description, THEME_BENGAL_SETTING_SELECT_NO, $yesnooption);
+    $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Preset.
