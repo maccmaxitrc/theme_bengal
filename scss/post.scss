@@ -17,6 +17,7 @@ $border-radius: 4px;
 
 // Page width overrides
 #page-mod-forum-view,
+#page-mod-forum-post,
 #page-mod-feedback-analysis_course
 {
   #page.drawers .main-inner {
@@ -690,12 +691,20 @@ a:not([class]):focus,
   .modtype_forum,
   .modtype_url {
     .activityiconcontainer {
-      max-width: 50px;
-      max-height: 50px;
-      display: block;
+      display: inline-flex;
+      margin-right: .5rem !important;
+      max-width: 30px;
+      max-height: 30px;
     }
-    .text-uppercase.small {
-      display: block;
+    .activitytitle .text-uppercase.small {
+      display: none;
+    }
+    .activityname {
+      margin-top: 2px;
+    }
+    img.activityicon {
+      height: 16px !important;
+      width: 16px !important;
     }
   }
   .activity-item.activity {
@@ -1209,7 +1218,7 @@ i.icon.fa.fa-long-arrow-down.fa-fw {
 
 // External tool styling
 .modtype_lti .activityiconcontainer,
-.modicon_lti.activityiconcontainer {
+[class*="modicon_lti"].activityiconcontainer {
   img {
     filter: brightness(0) invert(1);
   }
@@ -1234,6 +1243,127 @@ i.icon.fa.fa-long-arrow-down.fa-fw {
 // Fix for long names in drop downs like grader single view
 .tertiary-navigation .btn>div {
   overflow: hidden;
+}
+
+// Fix for new window icon formatting while editing lesson
+#page-mod-lesson-edit .icon.fa-external-link + .sr-only {
+  display: inline-block;
+}
+
+// Styling for file manager popup window
+.path-lib-editor-tiny-plugins-media #page {
+  background-color: white;
+  margin-top: 0;
+}
+
+// Increase file manager popup width
+#tiny_media_form {
+  [data-fieldtype="filemanager"],
+  #id_deletefileshdrcontainer .col-md-9,
+  #id_missingfileshdr .col-md-9 {
+    flex: none;
+    max-width: 100%;
+  }
+}
+
+// Enforce max width on file manager file name column to prevent horizontal scrolling
+.filemanager .yui3-datatable-col-displayname {
+  max-width: 375px;
+}
+
+// Enforce max width on file picker file name and mime type columns to prevent horizontal scrolling
+.filepicker {
+  .yui3-datatable-col-displayname {
+    max-width: 250px;
+  }
+  .yui3-datatable-col-mimetype {
+    max-width: 100px;
+  }
+}
+
+// Table caption styling
+table caption {
+  caption-side: top;
+  color: #1d2125;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding: 0;
+}
+
+// Large modal dialogue sizing for text editor
+@media (min-width: 992px) {
+  .modal-lg, .modal-xl {
+    max-width: 830px;
+  }
+}
+
+// Allow editor to fill width of the page for easier editing
+@media (min-width: 768px) {
+  .mform fieldset .fcontainer.collapseable .col-md-9[data-fieldtype="editor"],
+  .mform fieldset .fcontainer.collapseable .col-md-9[data-fieldtype="filemanager"] {
+    flex: none;
+    max-width: 814px;
+    padding-left: 2.5rem;
+    // Remove padding for large pages like question edit
+    [id^="page-question-type"] & {
+      padding-left: 15px;
+    }
+  }
+  [id="fitem_id_introeditor"],
+  [id="fitem_id_message"],
+  [id="fitem_id_introattachments"] {
+    &+.form-group.row.fitem {
+      .col-md-9.checkbox {
+        padding-left: 2.5rem;
+      }
+      &+.form-group.row.fitem {
+        .col-md-9.checkbox {
+          padding-left: 2.5rem;
+        }
+        &+.form-group.row.fitem .col-md-9.checkbox {
+          padding-left: 2.5rem;
+        }
+      }
+    }
+    &+.form-group.row.fitem {
+      .col-md-3.col-form-label {
+        display: none;
+      }
+      &+.form-group.row.fitem {
+        .col-md-3.col-form-label {
+          display: none;
+        }
+        &+.form-group.row.fitem .col-md-3.col-form-label {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Improve Tinymce border contrast
+.tox.tox-tinymce,
+.tox .tox-statusbar {
+  border-color: #8f959e !important;
+  border-width: 1px;
+}
+.tox:not(.tox-tinymce-inline) .tox-editor-header {
+  border-bottom: 1px solid #8f959e !important;
+}
+.tox .tox-toolbar,
+.tox .tox-toolbar__overflow,
+.tox .tox-toolbar__primary {
+  background-image: repeating-linear-gradient(#bbb 0 1px,transparent 1px 39px) !important;
+}
+.tox .tox-statusbar,
+.tox .tox-statusbar a,
+.tox .tox-statusbar__path-item,
+.tox .tox-statusbar__wordcount{
+  color: #222f3e !important;
+}
+.tox .tox-statusbar__resize-handle svg {
+  fill: #222f3e !important;
 }
 
 // Activity icon colors

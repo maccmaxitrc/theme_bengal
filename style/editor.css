@@ -10,9 +10,56 @@
     max-width: calc(100% - 1em);
 }
 
+body {
+    font-family: Roboto, sans-serif !important;
+    font-size: 15px !important;
+}
+
 body.mce-content-body a {
     color: #b82b00;
 }
 body.mce-content-body a:hover {
     color: #701a00;
+}
+
+h3, h4, h5, h6 {
+    font-family: Roboto Slab, serif !important;
+    font-weight: 700 !important;
+}
+
+h3, h4, h5, h6,
+.h3, .h4, .h5, .h6 {
+    margin-bottom: 0.5rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+h3, .h3 {
+    font-size: 1.640625rem !important;
+}
+
+h4, .h4 {
+    font-size: 1.40625rem !important;
+}
+
+h5, .h5 {
+    font-size: 1.171875rem !important;
+}
+
+h6, .h6 {
+    font-size: 0.9375rem !important;
+}
+
+.lead {
+    font-size: 1.171875rem !important;
+    font-weight: 300;
+}
+
+table caption {
+    caption-side: top;
+    color: #1d2125;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding: 0;
 }
