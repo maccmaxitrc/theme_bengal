@@ -1032,7 +1032,7 @@ body.h5p-embed #page{
 // bf alt format icon styling
 .local-bfaltformat-course-page-icon,
 .local-bfaltformat-course-page-icon + .afterlink {
-  padding-top: 4px;
+  margin-top: -8px;
 }
 
 // Fix for scrollbars showing up on MC questions
@@ -1364,6 +1364,41 @@ table caption {
 }
 .tox .tox-statusbar__resize-handle svg {
   fill: #222f3e !important;
+}
+
+// Forum add discussion topic
+#collapseAddForm .mform {
+  .col-md-9[data-fieldtype="editor"] {
+    flex: none;
+    max-width: 814px;
+    .tox.tox-tinymce {
+      height: 350px;
+    }
+  }
+}
+[id="fitem_id_message"] {
+  &+.form-group.row.fitem {
+    .col-md-3.col-form-label {
+      display: none !important;
+    }
+  }
+}
+
+// Fix for when user image doesn't load in workshop submission
+.path-mod-workshop .submission-summary .author .picture img.userpicture {
+  max-width: 35px;
+  max-height: 35px;
+}
+
+// Make assignment tree stand out more
+.path-mod-assign .activity-description [id^="assign_files_tree"] {
+  margin-top: .5rem;
+}
+
+// Fix advanced grading remarks
+form[id^="gradingform"] textarea[id$="remark"] {
+  height: 102px;
+  resize: vertical;
 }
 
 // Activity icon colors
