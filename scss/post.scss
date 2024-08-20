@@ -1401,6 +1401,26 @@ form[id^="gradingform"] textarea[id$="remark"] {
   resize: vertical;
 }
 
+// bf alt format icon styling
+.local-bfaltformat-course-page-icon,
+.local-bfaltformat-course-page-icon + .afterlink {
+  padding-top: 0;
+  margin-top: -8px;
+}
+
+// Increase width of course input fields
+.path-course{
+  #fitem_id_shortname input[name="shortname"],
+  #fitem_id_idnumber input[name="idnumber"] {
+    width: 270px;
+  }
+}
+
+// Improve contrast on code element
+code {
+  color: #DB1A74;
+}
+
 // Activity icon colors
 $activity-color-content: #399BE2;
 $activity-color-administration: #11A676;
